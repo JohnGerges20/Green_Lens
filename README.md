@@ -103,3 +103,10 @@ Check each script's configuration and dataset paths before running it.
 - Streamlit
 - PyTorch
 - Torchvision
+## Work Team
+-جون جرجس ونيس حنا 
+-حمد خالد جمعة الجمال 
+-مصطفي رجب عبدالوهاب مخلوف 
+-محمد احمد عبد اللاه عبد الظاهر
+-جمال اكرامي محمد الشرقاوي
+-
