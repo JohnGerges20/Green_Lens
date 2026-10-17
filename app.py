@@ -497,6 +497,13 @@ with st.sidebar:
 selected_page = st.session_state.page
 is_arabic = st.session_state.language == "العربية"
 
+sidebar_rtl_fix = (
+    '[data-testid="stSidebar"][aria-expanded="false"] '
+    '{ transform: translateX(100%) !important; }'
+    if is_arabic else ""
+)
+
+
 # Apply RTL to the app layout when Arabic is selected; preserve LTR for English.
 st.markdown(
     f"""<style>
@@ -505,8 +512,29 @@ st.markdown(
     .stApp [data-testid="stMain"] {{ text-align: {'right' if is_arabic else 'left'}; }}
     .stApp [data-testid="stHorizontalBlock"] {{ direction: {'rtl' if is_arabic else 'ltr'}; }}
     [data-testid="stSidebar"] {{ direction: {'rtl' if is_arabic else 'ltr'}; text-align: {'right' if is_arabic else 'left'}; }}
-    /* Streamlit hard-codes text-align:left on these containers, which defeats RTL inheritance.
-       "start" = left in LTR and right in RTL, so English is unchanged. */
+    {sidebar_rtl_fix}
+
+    /* Give the collapsed sidebar toggle a solid background */
+    [data-testid="stSidebarCollapsedControl"],
+    [data-testid="stSidebarCollapsedControl"] button,
+    button[data-testid="stSidebarCollapsedControl"] {{
+        background-color: #14532d !important;
+        color: #ffffff !important;
+        opacity: 1 !important;
+        border: 1px solid #86c99a !important;
+    }}
+
+    /* Keep the toggle arrow visible and white */
+    [data-testid="stSidebarCollapsedControl"] svg,
+    [data-testid="stSidebarCollapsedControl"] button svg,
+    button[data-testid="stSidebarCollapsedControl"] svg {{
+        color: #ffffff !important;
+        fill: #ffffff !important;
+        stroke: #ffffff !important;
+        opacity: 1 !important;
+    }}
+
+    /* Use logical alignment so Arabic is right-aligned and English left-aligned */
     [data-testid="stMain"] [data-testid="stElementContainer"],
     [data-testid="stMain"] [data-testid="stMarkdown"],
     [data-testid="stSidebar"] [data-testid="stElementContainer"],
