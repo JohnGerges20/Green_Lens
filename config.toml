@@ -1,0 +1,11 @@
+# GreenLens theme.
+# Streamlit's default primaryColor is red (#ff4b4b). It is what painted the
+# thick red slider track and the red radio dot. Setting it here makes every
+# built-in widget (slider, radio, focus rings, hover borders) use GreenLens green.
+#
+# NOTE: Streamlit reads this file from the folder you launch `streamlit run` in,
+# so always start the app from the project folder (see instructions).
+
+[theme]
+base = "light"
+primaryColor = "#16a34a"
