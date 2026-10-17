@@ -105,6 +105,7 @@ Check each script's configuration and dataset paths before running it.
 - Torchvision
 
 
+
 ## Work Team
 
 - جون جرجس ونيس حنا
@@ -112,3 +113,4 @@ Check each script's configuration and dataset paths before running it.
 - مصطفى رجب عبدالوهاب مخلوف
 - محمد أحمد عبد اللاه عبد الظاهر
 - جمال إكرامي محمد الشرقاوي
+- إياد أحمد فاروق سليمان عيسى
