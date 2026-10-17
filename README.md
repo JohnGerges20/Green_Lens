@@ -104,10 +104,11 @@ Check each script's configuration and dataset paths before running it.
 - PyTorch
 - Torchvision
 
+
 ## Work Team
 
 - جون جرجس ونيس حنا
-- حمد خالد جمعة الجمال
+- أحمد خالد جمعة الجمال
 - مصطفى رجب عبدالوهاب مخلوف
 - محمد أحمد عبد اللاه عبد الظاهر
 - جمال إكرامي محمد الشرقاوي
