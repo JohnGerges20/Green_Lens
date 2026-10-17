@@ -14,7 +14,7 @@ from torchvision import models
 # ---------------------------------
 
 BASE_DIR = Path(__file__).resolve().parent
-DATASET_DIR = BASE_DIR / "dataset" / "color"
+DATASET_DIR = BASE_DIR / "similarity_images"
 CACHE_DIR = BASE_DIR / "models"
 CACHE_PATH = CACHE_DIR / "similarity_index_test.pt"
 
